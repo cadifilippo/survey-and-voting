@@ -7,11 +7,12 @@
     "pre-push": "yarn test",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "fix-lint": "eslint src/**/*.js src/**/*.jsx --fix"
+    "fix-lint": "eslint src/**/*.js src/**/*.jsx --fix",
+    "commit": "git-cz"
   },
   "dependencies": {
     "@testing-library/jest-dom": "5.16.2",
@@ -35,6 +36,11 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "16.1.0",
+    "@commitlint/config-conventional": "16.0.0",
+    "commitizen": "4.2.4",
+    "cross-env": "7.0.3",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "8.8.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
@@ -42,5 +48,10 @@
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "2.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
