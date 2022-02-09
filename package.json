@@ -1,9 +1,9 @@
 {
   "name": "survey-and-voting",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "pre-commit": "lint-staged",
+    "pre-commit": "yarn patch && lint-staged",
     "pre-push": "yarn test",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -12,7 +12,10 @@
     "prepare": "husky install",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "fix-lint": "eslint src/**/*.js src/**/*.jsx --fix",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "major": "yarn version --no-git-tag-version --new-version=major",
+    "minor": "yarn version --no-git-tag-version --new-version=minor",
+    "patch": "yarn version --no-git-tag-version --new-version=patch"
   },
   "dependencies": {
     "@testing-library/jest-dom": "5.16.2",
