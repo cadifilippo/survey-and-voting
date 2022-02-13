@@ -1,9 +1,16 @@
 import { Outlet } from 'react-router-dom';
+import { Navigator } from '../components';
+
+import styles from './Layout.module.css';
 
 const Layout = () => (
   <>
-    <h2>Layout de mi App</h2>
-    <Outlet />
+    <header className={styles.header}>
+      <Navigator />
+    </header>
+    <main className={styles.main}>
+      <Outlet />
+    </main>
   </>
 );
 
