@@ -9,3 +9,7 @@ https://github.com/pmndrs/zustand
 https://github.com/pmndrs/zustand/wiki/Testing
 
 ---
+
+## fs.promise
+
+https://advancedweb.hu/do-not-use-fs-sync-methods-in-javascript-use-fs-promises-instead/

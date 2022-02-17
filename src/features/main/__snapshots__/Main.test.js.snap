@@ -16,26 +16,26 @@ Object {
         <section
           class="buttons"
         >
-          <button
-            class="button"
+          <a
+            class="button__text"
+            href="/survey/new"
           >
-            <a
-              class="button__text"
-              href="/survey/new"
+            <button
+              class="button"
             >
               Survey
-            </a>
-          </button>
-          <button
-            class="button"
+            </button>
+          </a>
+          <a
+            class="button__text"
+            href="/voting/new"
           >
-            <a
-              class="button__text"
-              href="/voting/new"
+            <button
+              class="button"
             >
               Voting
-            </a>
-          </button>
+            </button>
+          </a>
         </section>
       </section>
     </div>
@@ -52,26 +52,26 @@ Object {
       <section
         class="buttons"
       >
-        <button
-          class="button"
+        <a
+          class="button__text"
+          href="/survey/new"
         >
-          <a
-            class="button__text"
-            href="/survey/new"
+          <button
+            class="button"
           >
             Survey
-          </a>
-        </button>
-        <button
-          class="button"
+          </button>
+        </a>
+        <a
+          class="button__text"
+          href="/voting/new"
         >
-          <a
-            class="button__text"
-            href="/voting/new"
+          <button
+            class="button"
           >
             Voting
-          </a>
-        </button>
+          </button>
+        </a>
       </section>
     </section>
   </div>,
