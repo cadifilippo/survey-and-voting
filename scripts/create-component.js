@@ -1,8 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
 const enquirer = require('enquirer');
-const toPascalCase = require('../utils/toPascalCase');
-const toSnakeCase = require('../utils/toSnakeCase');
+const toPascalCase = require('../src/utils/toPascalCase');
+const toSnakeCase = require('../src/utils/toSnakeCase');
 
 const COMPONENT_TEMPLATE_PATH = 'templates/component';
 
@@ -28,7 +28,8 @@ function createComponentFile(componentPath, replacedComponentFile) {
 }
 
 async function createComponent(componentTemplates, type, componentName) {
-  const mappedType = type === 'common' ? 'common/components' : `features/${type}/components`;
+  const mappedType =
+    type === 'common' ? 'src/common/components' : `src/features/${type}/components`;
   const componentPath = path.join(__dirname, `../${mappedType}/${componentName}`);
 
   try {

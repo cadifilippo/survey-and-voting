@@ -15,7 +15,7 @@
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "fix-lint": "eslint src/**/*.js src/**/*.jsx --fix",
     "commit": "git-cz",
-    "cc": "node ./src/scripts/create-component",
+    "cc": "node ./scripts/create-component",
     "major": "yarn version --no-git-tag-version --new-version=major",
     "minor": "yarn version --no-git-tag-version --new-version=minor",
     "patch": "yarn version --no-git-tag-version --new-version=patch"
