@@ -28,6 +28,18 @@ const Navigator = () => {
             Profile
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? 'red' : 'black'
+              };
+            }}
+            to="/login"
+          >
+            Login
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

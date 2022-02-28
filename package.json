@@ -1,6 +1,6 @@
 {
   "name": "survey-and-voting",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "pre-commit": "lint-staged",
@@ -21,6 +21,7 @@
     "patch": "yarn version --no-git-tag-version --new-version=patch"
   },
   "dependencies": {
+    "@supabase/supabase-js": "1.30.6",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",

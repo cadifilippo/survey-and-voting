@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from '../common/layouts';
 import { Main } from '../features';
+import { Login } from '../features/login/views';
 
 const Profile = () => {
   return <h2>Profile</h2>;
@@ -23,6 +24,7 @@ const AppRouter = () => (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Main />} />
+        <Route path="login" element={<Login />} />
         <Route path="profile" element={<Profile />} />
         <Route path="voting">
           <Route path=":id" element={<Voting />} />
