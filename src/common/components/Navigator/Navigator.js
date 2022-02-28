@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../../context/auth';
 
 const Navigator = () => {
+  const { logout } = useAuth();
   return (
     <nav>
       <ul>
@@ -29,16 +31,7 @@ const Navigator = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            style={({ isActive }) => {
-              return {
-                color: isActive ? 'red' : 'black'
-              };
-            }}
-            to="/login"
-          >
-            Login
-          </NavLink>
+          <button onClick={logout}>Logout</button>
         </li>
       </ul>
     </nav>

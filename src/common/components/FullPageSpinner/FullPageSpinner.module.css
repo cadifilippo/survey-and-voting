@@ -1,0 +1,8 @@
+.full_page_spinner {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
