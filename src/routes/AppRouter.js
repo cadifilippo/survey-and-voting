@@ -1,43 +1,19 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from '../common/layouts';
-import { Main } from '../features';
+import React from 'react';
+import { FullPageSpinner } from '../common/components';
+import { useUser } from '../context/user';
 
-const Profile = () => {
-  return <h2>Profile</h2>;
-};
-const Voting = () => {
-  return <h2>Voting</h2>;
-};
-const Survey = () => {
-  return <h2>Survey</h2>;
-};
-const VotingForm = () => {
-  return <h2>Voting Form</h2>;
-};
-const SurveyForm = () => {
-  return <h2>Survey Form</h2>;
-};
+const PrivateApp = React.lazy(() => import('./Private.routes'));
+const PublicApp = React.lazy(() => import('./Public.routes'));
 
-const AppRouter = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Main />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="voting">
-          <Route path=":id" element={<Voting />} />
-          <Route path="new" element={<VotingForm />} />
-          <Route index element={<Navigate to="/" />} />
-        </Route>
-        <Route path="survey">
-          <Route path=":id" element={<Survey />} />
-          <Route path="new" element={<SurveyForm />} />
-          <Route index element={<Navigate to="/" />} />
-        </Route>
-      </Route>
-      <Route path="*" element={<Navigate to="/" />} />
-    </Routes>
-  </BrowserRouter>
-);
+function AppRouter() {
+  const user = useUser();
+
+  console.log('user', user);
+  return (
+    <React.Suspense fallback={<FullPageSpinner />}>
+      {user ? <PrivateApp /> : <PublicApp />}
+    </React.Suspense>
+  );
+}
 
 export default AppRouter;
