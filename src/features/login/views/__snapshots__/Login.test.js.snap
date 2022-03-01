@@ -5,14 +5,20 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
+      <section
         class="login"
       >
-        <div>
-          <h1>
-            Hello, please SignIn
+        <div
+          class="form"
+        >
+          <h1
+            class="title"
+          >
+            Survey & Voting
           </h1>
-          <button>
+          <button
+            class="button"
+          >
             <svg
               height="40"
               width="40"
@@ -22,18 +28,24 @@ Object {
             Sign In with Github
           </button>
         </div>
-      </div>
+      </section>
     </div>
   </body>,
   "container": <div>
-    <div
+    <section
       class="login"
     >
-      <div>
-        <h1>
-          Hello, please SignIn
+      <div
+        class="form"
+      >
+        <h1
+          class="title"
+        >
+          Survey & Voting
         </h1>
-        <button>
+        <button
+          class="button"
+        >
           <svg
             height="40"
             width="40"
@@ -43,7 +55,7 @@ Object {
           Sign In with Github
         </button>
       </div>
-    </div>
+    </section>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
