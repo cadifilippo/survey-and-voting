@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(

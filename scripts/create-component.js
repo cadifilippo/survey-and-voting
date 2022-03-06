@@ -1,8 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
 const enquirer = require('enquirer');
-const toPascalCase = require('../src/utils/toPascalCase');
-const toSnakeCase = require('../src/utils/toSnakeCase');
+const toPascalCase = require('../src/utils/toPascalCase/toPascalCase');
+const toSnakeCase = require('../src/utils/toSnakeCase/toSnakeCase');
 
 const COMPONENT_TEMPLATE_PATH = 'templates/component';
 
