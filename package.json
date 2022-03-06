@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "pre-commit": "lint-staged",
+    "pre-commit": "lint-staged && yarn run test --coverage",
     "pre-push": "yarn test",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -63,6 +63,26 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/common/**/{.js}",
+      "./src/features/**/*.js",
+      "./src/helpers/**/*.js",
+      "./src/hooks/**/*.js",
+      "./src/services/**/*.js",
+      "./src/store/**/*.js",
+      "./src/utils/**/*.js",
+      "!./src/**/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 20,
+        "lines": 35,
+        "statements": -45
+      }
     }
   }
 }
