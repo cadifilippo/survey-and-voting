@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from '../common/layouts';
 import { Main } from '../features';
+import { VotingForm } from '../features/voting';
 
 const Profile = () => {
   return <h2>Profile</h2>;
@@ -10,9 +11,6 @@ const Voting = () => {
 };
 const Survey = () => {
   return <h2>Survey</h2>;
-};
-const VotingForm = () => {
-  return <h2>Voting Form</h2>;
 };
 const SurveyForm = () => {
   return <h2>Survey Form</h2>;
