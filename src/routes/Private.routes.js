@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from '../common/layouts';
 import { Main } from '../features';
+import { SurveyForm } from '../features/survey';
 
 const Profile = () => {
   return <h2>Profile</h2>;
@@ -13,9 +14,6 @@ const Survey = () => {
 };
 const VotingForm = () => {
   return <h2>Voting Form</h2>;
-};
-const SurveyForm = () => {
-  return <h2>Survey Form</h2>;
 };
 
 function PrivateApp() {

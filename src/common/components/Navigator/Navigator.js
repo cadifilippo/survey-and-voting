@@ -9,7 +9,7 @@ import { LogoutIcon } from '../../../assets';
 const Navigator = () => {
   const user = useUser();
   const { logout } = useAuth();
-  console.log(user);
+
   return (
     <nav className={styles.container}>
       <section className={styles.menu}>
