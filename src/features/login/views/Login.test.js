@@ -11,4 +11,8 @@ describe('Login', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  test('should have a github button', () => {
+    render(<Login />);
+    expect(screen.getByTestId('github')).toBeInTheDocument();
+  });
 });
