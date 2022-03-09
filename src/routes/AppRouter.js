@@ -8,7 +8,6 @@ const PublicApp = React.lazy(() => import('./Public.routes'));
 function AppRouter() {
   const user = useUser();
 
-  console.log('user', user);
   return (
     <React.Suspense fallback={<FullPageSpinner />}>
       {user ? <PrivateApp /> : <PublicApp />}
