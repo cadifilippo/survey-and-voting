@@ -18,7 +18,8 @@
     "cc": "node ./scripts/create-component",
     "major": "yarn version --no-git-tag-version --new-version=major",
     "minor": "yarn version --no-git-tag-version --new-version=minor",
-    "patch": "yarn version --no-git-tag-version --new-version=patch"
+    "patch": "yarn version --no-git-tag-version --new-version=patch",
+    "phoenix": "rm -rf node_modules && yarn cache clean --force && yarn install"
   },
   "dependencies": {
     "@supabase/supabase-js": "1.30.6",
@@ -57,8 +58,7 @@
     "eslint-plugin-react": "7.28.0",
     "husky": ">=6",
     "lint-staged": ">=10",
-    "prettier": "2.5.1",
-    "react-app-rewired": "2.1.11"
+    "prettier": "2.5.1"
   },
   "config": {
     "commitizen": {
@@ -78,10 +78,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 70,
-        "functions": 20,
-        "lines": 35,
-        "statements": -45
+        "branches": 30,
+        "functions": 10,
+        "lines": 30,
+        "statements": 0
       }
     }
   }
