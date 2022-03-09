@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "pre-commit": "lint-staged && yarn run test --coverage",
-    "pre-push": "yarn test",
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn run test --coverage",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom --colors",
@@ -19,7 +19,7 @@
     "major": "yarn version --no-git-tag-version --new-version=major",
     "minor": "yarn version --no-git-tag-version --new-version=minor",
     "patch": "yarn version --no-git-tag-version --new-version=patch",
-    "phoenix": "rm -rf node_modules && yarn cache clean --force && yarn install"
+    "phoenix": "rm -rf node_modules && rm -rf yarn.lock && yarn cache clean --force && yarn install"
   },
   "dependencies": {
     "@supabase/supabase-js": "1.30.6",
@@ -28,6 +28,7 @@
     "@testing-library/user-event": "13.5.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "4.3.1",
     "react-router-dom": "6.2.1",
     "react-scripts": "5.0.0",
     "web-vitals": "2.1.4",
@@ -48,14 +49,16 @@
   "devDependencies": {
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
+    "@types/react": "17.0.39",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "enquirer": "2.3.6",
-    "eslint": "8.8.0",
+    "eslint": "8.10.0",
     "eslint-config-prettier": "8.3.0",
+    "eslint-config-react-app": "7.0.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.29.3",
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "2.5.1"
