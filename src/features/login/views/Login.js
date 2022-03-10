@@ -14,7 +14,7 @@ const Login = () => {
     <section className={styles.login}>
       <div className={styles.form}>
         <h1 className={styles.title}>Survey & Voting</h1>
-        <button className={styles.button} onClick={login}>
+        <button className={styles.button} onClick={login} data-testid="github">
           <GithubIcon width={40} height={40} />
           Sign In with Github
         </button>
