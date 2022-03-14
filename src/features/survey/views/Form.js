@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { MdOutlineAddPhotoAlternate, MdEdit } from 'react-icons/md';
+import InputQuestion from '../components/InputQuestion';
 import styles from './Form.module.css';
 
 const INITIAL_QUESTION = {
@@ -61,36 +62,23 @@ const Form = () => {
             />
             <MdEdit className={styles.name_icon} />
           </label>
-          <input type="text" className={styles.description} placeholder="Description" />
         </section>
-        <section className="form-body">
+        <textarea
+          className={styles.description}
+          placeholder="Description"
+          rows="4"
+          maxLength={140}
+        />
+        <section className={styles.body}>
           {questions.map((question, idx) => (
-            <article key={idx} style={{ display: 'flex', flexDirection: 'column', marginTop: 50 }}>
-              <label>
-                Pregunta {idx + 1}
-                <input type="text" placeholder="Question" />
-              </label>
-              <label>
-                Tipo de pregunta
-                <select>
-                  {OPTIONS_TYPE.map((type) => (
-                    <option value={type} key={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                Requerido
-                <div className="options">
-                  <input type="checkbox" name="required" value="true" />
-                </div>
-              </label>
-              {idx + 1 === questions.length && questions.length > 2 && (
-                <button onClick={handleDelete}>Quitar</button>
-              )}
-              <h3 key={idx}>{JSON.stringify(question)}</h3>
-            </article>
+            <InputQuestion
+              key={idx}
+              number={idx}
+              OPTIONS_TYPE={OPTIONS_TYPE}
+              total={questions.length}
+              handleDelete={handleDelete}
+              question={question}
+            />
           ))}
           <button onClick={handleAddQuestion}>Add Question</button>
         </section>
