@@ -23,7 +23,7 @@ const InputQuestion = ({ number, OPTIONS_TYPE, total, handleDelete }) => {
           <input type="checkbox" name="required" value="true" />
         </div>
       </label>
-      {number === total && total > 2 && <button onClick={handleDelete}>Quitar</button>}
+      {number + 1 === total && total > 2 && <button onClick={handleDelete}>Quitar</button>}
     </article>
   );
 };

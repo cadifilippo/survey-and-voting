@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { MdOutlineAddPhotoAlternate, MdEdit } from 'react-icons/md';
+import { MdAdd, MdOutlineAddPhotoAlternate, MdEdit } from 'react-icons/md';
 import InputQuestion from '../components/InputQuestion';
 import styles from './Form.module.css';
 
@@ -80,7 +80,9 @@ const Form = () => {
               question={question}
             />
           ))}
-          <button onClick={handleAddQuestion}>Add Question</button>
+          <button className={styles.add} onClick={handleAddQuestion}>
+            <MdAdd className={styles.add_icon} />
+          </button>
         </section>
       </form>
     </article>

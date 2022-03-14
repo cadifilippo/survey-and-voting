@@ -96,3 +96,17 @@
 .body {
   padding: 0 5% 50px;
 }
+
+.add {
+  background-color: transparent;
+  border-radius: 15px;
+  border: 3px dashed #ccc;
+  height: 50px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.add_icon {
+  color: #ccc;
+  font-size: 35px;
+}
