@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { MdOutlineAddPhotoAlternate } from 'react-icons/md';
+import { useState, useEffect, useRef } from 'react';
+import { MdOutlineAddPhotoAlternate, MdEdit } from 'react-icons/md';
+import styles from './Form.module.css';
 
 const INITIAL_QUESTION = {
   question: '',
@@ -13,6 +14,7 @@ const Form = () => {
   const [cant, setCant] = useState(2);
   const [questions, setQuestions] = useState([...Array(cant)].map(() => INITIAL_QUESTION));
   const [banner] = useState(null);
+  const fileInput = useRef(null);
 
   useEffect(() => {
     if (cant === questions.length) return;
@@ -37,25 +39,31 @@ const Form = () => {
     e.preventDefault();
   };
   return (
-    <>
-      <h1 style={{ width: '100%', textAlign: 'center' }}>Survey Form</h1>
+    <article className={styles.content}>
+      <h1 className={styles.title}>Survey Form</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-header">
-          <div
-            className="banner-image"
-            style={{ width: '100%', height: '140px', backgroundColor: 'tomato' }}
-          >
+        <section className={styles.header}>
+          <div onClick={() => fileInput.current.click()} className={styles.banner_image}>
             {!banner ? (
-              <MdOutlineAddPhotoAlternate />
+              <MdOutlineAddPhotoAlternate className={styles.icon} />
             ) : (
               <img src="" alt="banner" style={{ width: '100%', height: '140px' }} />
             )}
-            <input type="file" hidden />
+            <input ref={fileInput} type="file" hidden />
           </div>
-          <input type="text" placeholder="Title" />
-          <input type="text" placeholder="Description" />
-        </div>
-        <div className="form-body">
+          <label className={styles.name}>
+            <input
+              type="text"
+              className={styles.name_input}
+              placeholder="Title"
+              autoComplete="false"
+              name="survey"
+            />
+            <MdEdit className={styles.name_icon} />
+          </label>
+          <input type="text" className={styles.description} placeholder="Description" />
+        </section>
+        <section className="form-body">
           {questions.map((question, idx) => (
             <article key={idx} style={{ display: 'flex', flexDirection: 'column', marginTop: 50 }}>
               <label>
@@ -85,9 +93,9 @@ const Form = () => {
             </article>
           ))}
           <button onClick={handleAddQuestion}>Add Question</button>
-        </div>
+        </section>
       </form>
-    </>
+    </article>
   );
 };
 

@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from '../common/layouts';
-import { Main } from '../features';
-import { SurveyForm } from '../features/survey';
+import { Main, SurveyForm } from '../features';
 
 const Profile = () => {
   return <h2>Profile</h2>;
