@@ -12,8 +12,8 @@
     "coverage": "react-scripts test --colors --coverage",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "fix-lint": "eslint src/**/*.js src/**/*.jsx --fix",
+    "lint": "eslint src/**/*.js",
+    "fix-lint": "eslint src/**/*.js --fix",
     "commit": "git-cz",
     "cc": "node ./scripts/create-component",
     "major": "yarn version --no-git-tag-version --new-version=major",
@@ -79,12 +79,15 @@
       "./src/utils/**/*.js",
       "!./src/**/index.js"
     ],
+    "coveragePathIgnorePatterns": [
+      "./src/helpers/auth.js"
+    ],
     "coverageThreshold": {
       "global": {
-        "branches": 30,
-        "functions": 10,
-        "lines": 30,
-        "statements": 0
+        "branches": 50,
+        "functions": 20,
+        "lines": 35,
+        "statements": -45
       }
     }
   }
