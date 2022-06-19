@@ -5,18 +5,18 @@
       2,
       "always",
       [
-        "build",
-        "chore",
-        "ci",
-        "docs",
-        "improvement",
         "feat",
         "fix",
-        "perf",
+        "test",
+        "chore",
+        "docs",
         "refactor",
-        "revert",
         "style",
-        "test"
+        "ci",
+        "perf",
+        "build",
+        "revert",
+        "improvement"
       ]
     ]
   }
