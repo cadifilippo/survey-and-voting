@@ -59,13 +59,14 @@
     "eslint-config-react-app": "7.0.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.3",
+    "git-cz": "4.9.0",
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "2.5.1"
   },
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "git-cz"
     }
   },
   "jest": {
