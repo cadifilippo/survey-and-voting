@@ -1,4 +1,6 @@
 module.exports = {
+  breakingChangePrefix: '🧨 ',
+  closedIssuePrefix: '✅ ',
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
   list: [
@@ -83,11 +85,45 @@ module.exports = {
   },
   messages: {
     type: 'Select the type of change that you are committing:',
+    // scope: 'Denote the SCOPE of this change (optional)',
     customScope: 'Select the scope this component affects:',
-    subject: 'Write a short, imperative mood description of the change:\n',
-    body: 'Provide a longer description of the change:\n ',
-    breaking: 'List any breaking changes:\n',
-    footer: 'Issues this commit closes, e.g #123:',
-    confirmCommit: 'The packages that this commit has affected\n'
-  }
+    subject: 'Write a short description of the change:\n',
+    body: 'Provide a longer description of the change (optional):\n ',
+    breaking: 'List any breaking changes (optional):\n',
+    footer: 'Issues this commit closes, e.g #123 (optional):',
+    footerPrefixsSelect: 'Select the ISSUES type of changeList by this change (optional):',
+    customFooterPrefixs: 'Input ISSUES Prefix:',
+    confirmCommit: 'The packages that this commit has affected (optional):\n'
+  },
+  // allowCustomScopes: true,
+  // allowEmptyScopes: true,
+  // customScopesAlign: 'bottom',
+  // customScopesAlias: 'custom',
+  // emptyScopesAlias: 'empty',
+  // upperCaseSubject: false,
+  // allowBreakingChanges: ['feat', 'fix'],
+  // breaklineNumber: 100,
+  // breaklineChar: '|',
+  // skipQuestions: [],
+  // issuePrefixs: [
+  //   {
+  //     value: 'link',
+  //     name: 'link:'
+  //   },
+  //   {
+  //     value: 'closed',
+  //     name: 'closed:'
+  //   }
+  // ],
+  // customIssuePrefixsAlign: 'top',
+  // emptyIssuePrefixsAlias: 'skip',
+  // customIssuePrefixsAlias: 'custom',
+  confirmColorize: true
+  // maxHeaderLength: null,
+  // maxSubjectLength: null,
+  // minSubjectLength: 0,
+  // defaultBody: '',
+  // defaultIssues: '',
+  // defaultScope: '',
+  // defaultSubject: ''
 };
